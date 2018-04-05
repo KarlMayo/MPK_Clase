@@ -120,6 +120,27 @@ void display ( void )   // Creamos la funcion donde se dibuja
 			glColor3f(0.0, 1.0, 0);
 			glRotatef(jupiter, 0.0, 1.0, 0.0);//rotacion jupiter
 			glutSolidSphere(1.5, 20, 20);
+			glPushMatrix();
+				glRotatef(luna, 0.0, 1.0, 0.0);//traslacion luna
+				glTranslatef(2, 0, 0);
+				glColor3f(5.0, 5.0, 5.0);
+				glRotatef(luna, 0.0, 1.0, 0.0);//rotacion luna
+				glutSolidSphere(0.4, 20, 20);
+			glPopMatrix();
+			glPushMatrix();
+				glRotatef(luna, 0.0, 1.0, 0.0);//traslacion luna
+				glTranslatef(3, 1, 0);
+				glColor3f(5.0, 5.0, 5.0);
+				glRotatef(luna, 0.0, 1.0, 0.0);//rotacion luna
+				glutSolidSphere(0.4, 20, 20);
+			glPopMatrix();
+				glPushMatrix();
+				glRotatef(luna, 0.0, 1.0, 0.0);//traslacion luna
+				glTranslatef(2, 1, 0);
+				glColor3f(5.0, 5.0, 5.0);
+				glRotatef(luna, 0.0, 1.0, 0.0);//rotacion luna
+				glutSolidSphere(0.4, 20, 20);
+			glPopMatrix();
 		glPopMatrix();
 		//SATURNO
 		glPushMatrix();
@@ -131,6 +152,20 @@ void display ( void )   // Creamos la funcion donde se dibuja
 			glPushMatrix();
 			glRotatef(saturno, 0.0, 1.0, 0.0);//rotacion saturno
 				glutSolidSphere(1.5, 20, 20);
+			glPopMatrix();
+			glPushMatrix();
+				glRotatef(luna, 0.0, 1.0, 0.0);//traslacion luna
+				glTranslatef(2, 0, 0);
+				glColor3f(5.0, 5.0, 5.0);
+				glRotatef(luna, 0.0, 1.0, 0.0);//rotacion luna
+				glutSolidSphere(0.4, 20, 20);
+			glPopMatrix();
+			glPushMatrix();
+				glRotatef(luna, 0.0, 1.0, 0.0);//traslacion luna
+				glTranslatef(2, 1, 0);
+				glColor3f(5.0, 5.0, 5.0);
+				glRotatef(luna, 0.0, 1.0, 0.0);//rotacion luna
+				glutSolidSphere(0.4, 20, 20);
 			glPopMatrix();
 		glPopMatrix();
 		//URANO
@@ -165,16 +200,16 @@ void animacion()
 
 	if(dwElapsedTime >= 30)
 	{
-		sol = (sol - 3) % 360;
+		sol = (sol - 5) % 360;
 		mercurio = (mercurio - 1) % 360;
-		venus = (venus - 2) % 360;
-		tierra = (tierra - 3) % 360;
+		venus = (venus - 3) % 360;
+		tierra = (tierra - 2) % 360;
 		luna = (luna - 1) % 360;
-		marte = (marte - 2) % 360;
-		jupiter = (jupiter - 3) % 360;
+		marte = (marte - 3) % 360;
+		jupiter = (jupiter - 2) % 360;
 		saturno = (saturno - 1) % 360;
-		urano = (urano - 2) % 360;
-		neptuno = (neptuno - 3) % 360;
+		urano = (urano - 3) % 360;
+		neptuno = (neptuno - 2) % 360;
 		dwLastUpdateTime = dwCurrentTime;
 	}
 

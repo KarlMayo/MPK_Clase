@@ -56,7 +56,7 @@ void InitGL ( GLvoid )     // Inicializamos parametros
 	t_Ajedrez2.BuildGLTexture();
 	t_Ajedrez2.ReleaseImage();
 
-	t_madera.LoadBMP("madera.bmp");
+	t_madera.LoadTGA("madera.tga");
 	t_madera.BuildGLTexture();
 	t_madera.ReleaseImage();
 }
@@ -423,25 +423,25 @@ void display ( void )   // Creamos la funcion donde se dibuja
 			glColor3f(1.0, 1.0, 1.0);
 			glScalef(2.5, 0.5, 2.5);
 			glTranslatef(4.5, -4.0, 0.75);
-			prisma(t_metal01.GLindex, t_metal01.GLindex);
+			prisma(t_madera.GLindex, t_madera.GLindex);
 		glPopMatrix();
 		glPushMatrix();
 			glColor3f(1.0, 1.0, 1.0);
 			glScalef(0.5, 2.5, 2.5);
 			glTranslatef(24.5, -1.4, 0.75);
-			prisma(t_metal01.GLindex, t_metal01.GLindex);
+			prisma(t_madera.GLindex, t_madera.GLindex);
 		glPopMatrix();
 		glPushMatrix();
 			glColor3f(1.0, 1.0, 1.0);
 			glScalef(0.5, 2.5, 2.5);
 			glTranslatef(20.5, -1.4, 0.75);
-			prisma(t_metal01.GLindex, t_metal01.GLindex);
+			prisma(t_madera.GLindex, t_madera.GLindex);
 		glPopMatrix();
 		glPushMatrix();
 			glColor3f(1.0, 1.0, 1.0);
 			glScalef(0.5, 2.5, 2.5);
 			glTranslatef(24.5,-0.4, 0.75);
-			prisma(t_metal01.GLindex, t_metal01.GLindex);
+			prisma(t_madera.GLindex, t_madera.GLindex);
 		glPopMatrix();
 
 
